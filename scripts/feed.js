@@ -2,6 +2,9 @@ import chalk from "chalk";
 
 console.log(chalk.yellow("Getting feeds..."));
 
+var parse = require('xml-parser');
+var inspect = require('util').inspect;
+
 var http = require('https');
 
 var options = {
@@ -21,7 +24,10 @@ var callback = function(response) {
 
   //the whole response has been recieved, so we just print it out here
   response.on('end', function () {
-    console.log(str);
+    //console.log(str);
+
+    var obj = parse(str);
+    console.log(inspect(obj, { colors: true, depth: Infinity }));
   });
 }
 
