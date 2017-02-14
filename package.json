@@ -1,0 +1,22 @@
+{
+  "name": "easy-reader",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Kristofer Krause",
+  "license": "GPL-3.0",
+
+  "scripts": {
+    "prestart" : "babel-node scripts/start.js",
+    "start" : "babel-node scripts/feed.js"
+  },
+
+  "devDependencies": {
+    "babel-cli": "6.16.0",
+    "babel-core": "6.17.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-latest": "6.16.0",
+    "babel-register": "6.16.3",
+    "chalk": "1.1.3",
+    "webpack": "2.2.1"
+  }
+}
